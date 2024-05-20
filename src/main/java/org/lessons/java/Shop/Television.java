@@ -24,14 +24,14 @@ public class Television extends Product{
 
     @Override
     public String toString() {
-        return "Television {" +
-                "code: '" + getCode() +
-                ", name: '" + getName() +
-                ", description: '" + getDesc() +
-                ", price: " + getPrice() + "$" + 
-                ", taxed price: " + getTaxedPrice(getPrice()) + "$" +
-                ", inches: " + inches + "''" +
-                ", isSmart: " + isSmart +
-                '}';
+        return "Television {" + "\n" +
+                "code: '" + getCode() + "\n" +
+                "name: '" + getName() + "\n" +
+                "description: '" + getDesc() + "\n" +
+                "price: " + getPrice() + "$" +  "\n" +
+                "taxed price: " + getTaxedPrice(getPrice()) + "$" + "\n" +
+                "inches: " + inches + "''" + "\n" +
+                "isSmart: " + isSmart + "\n" +
+                "}  \n";
     }
 }

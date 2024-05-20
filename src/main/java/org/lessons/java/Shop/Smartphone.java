@@ -28,13 +28,13 @@ class Smartphone extends Product{
 
     @Override
     public String toString() {
-        return "Smartphone {" +
-                "code: '" + getCode() +
-                ", name: '" + getName() +
-                ", description: '" + getDesc() +
-                ", price: " + getPrice() + "$" +
-                ", taxed price: " + getTaxedPrice(getPrice()) + "$" +
-                ", storage: " + storage + " GB" +
-                '}';
+        return "Smartphone {" + "\n" +
+                "code: '" + getCode() + "\n" +
+                "name: '" + getName() + "\n" +
+                "description: '" + getDesc() + "\n" +
+                "price: " + getPrice() + "$" + "\n" +
+                "taxed price: " + getTaxedPrice(getPrice()) + "$" + "\n" +
+                "storage: " + storage + " GB" + "\n" +
+                "}  \n";
     }
 }

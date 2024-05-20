@@ -64,12 +64,12 @@ public class Product {
 
     @Override
     public String toString() {
-        return "Product {" +
-                "code: '" + getCode() +
-                ", name: '" + name +
-                ", description: '" + description +
-                ", price: " + price + "$" +
-                ", taxed price: " + getTaxedPrice(price) + "$" +
-                '}';
+        return "Product {" +  "\n" +
+                "code: '" + getCode() + "\n" +
+                "name: '" + name + "\n" +
+                "description: '" + description + "\n" +
+                "price: " + price + "$" + "\n" +
+                "taxed price: " + getTaxedPrice(price) + "$" + "\n" +
+                "}  \n";
     }
 }
