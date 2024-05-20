@@ -21,4 +21,17 @@ public class Television extends Product{
     boolean getIfItsSmart(){
         return isSmart;
     }
+
+    @Override
+    public String toString() {
+        return "Television {" +
+                "code: '" + getCode() +
+                ", name: '" + getName() +
+                ", description: '" + getDesc() +
+                ", price: " + getPrice() + "$" + 
+                ", taxed price: " + getTaxedPrice(getPrice()) + "$" +
+                ", inches: " + inches + "''" +
+                ", isSmart: " + isSmart +
+                '}';
+    }
 }

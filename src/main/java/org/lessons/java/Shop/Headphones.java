@@ -12,4 +12,17 @@ public class Headphones extends Product {
         this.color = color;
         this.areWireless = areWireless;
     }
+
+    @Override
+    public String toString() {
+        return "Headphones {" +
+                "code: '" + getCode() +
+                ", name: '" + getName() +
+                ", description: '" + getDesc() +
+                ", price: " + getPrice() + "$" +
+                ", taxed price: " + getTaxedPrice(getPrice()) + "$" +
+                ", color: '" + color +
+                ", areWireless: " + areWireless +
+                '}';
+    }
 }

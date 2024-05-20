@@ -25,4 +25,16 @@ class Smartphone extends Product{
     // int getMaxStorage(){
     //     return storageOptions[new Random().nextInt(0, storageOptions.length)];
     // }
+
+    @Override
+    public String toString() {
+        return "Smartphone {" +
+                "code: '" + getCode() +
+                ", name: '" + getName() +
+                ", description: '" + getDesc() +
+                ", price: " + getPrice() + "$" +
+                ", taxed price: " + getTaxedPrice(getPrice()) + "$" +
+                ", storage: " + storage + " GB" +
+                '}';
+    }
 }
