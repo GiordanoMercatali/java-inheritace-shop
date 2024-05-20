@@ -61,4 +61,15 @@ public class Product {
         String newCodeName = String.format("%06d", code);
         return  newCodeName + "-" + name;
     }
+
+    @Override
+    public String toString() {
+        return "Product {" +
+                "code: '" + getCode() + '\'' +
+                ", name: '" + name + '\'' +
+                ", description: '" + description + '\'' +
+                ", price: " + price +
+                ", taxed price: " + getTaxedPrice(price) +
+                '}';
+    }
 }
