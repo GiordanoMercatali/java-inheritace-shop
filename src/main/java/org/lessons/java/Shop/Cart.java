@@ -1,6 +1,7 @@
 package org.lessons.java.Shop;
 
 import java.math.BigDecimal;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Cart {
@@ -9,8 +10,23 @@ public class Cart {
 
         Scanner myScanner = new Scanner(System.in);
         Product array[] = new Product[MAX_CART_SIZE];
+
+        //General
         String name;
         String description;
+        BigDecimal price;
+        BigDecimal vat = new BigDecimal("0.22");
+
+        //Smarthphone
+        int storage;
+
+        //Tv
+        int inches;
+        boolean isSmart;
+
+        //Headphones
+        String color;
+        boolean areWireless;
 
 
         for(int i = 0; i < array.length; i++) {
@@ -20,24 +36,35 @@ public class Cart {
             System.out.print("Product name: ");
             name = myScanner.nextLine();
             System.out.print("Product description: ");
-            description = myScanner.nextLine();            
+            description = myScanner.nextLine();
+            System.out.print("Product price: ");
+            price = new BigDecimal(myScanner.nextLine());    
             
 
             switch (nextProduct) {
                 case "smartphone":
-                    System.out.print("Product name: ");
-                    int storage = Integer.parseInt(myScanner.nextLine());
-                    array[i] = new Smartphone(name, description, new BigDecimal(1), new BigDecimal(0.22), storage);
+                    System.out.print("Phone storage: ");
+                    storage = Integer.parseInt(myScanner.nextLine());
+                    array[i] = new Smartphone(name, description, price, vat, storage);
                     break;
                 case "television":
-                    array[i] = array[i] = new Television(name, description, new BigDecimal(1), new BigDecimal(0.22), 1, true);
+                    System.out.print("TV inches: ");
+                    inches = Integer.parseInt(myScanner.nextLine());
+                    System.out.print("Is this TV smart? ");
+                    isSmart = myScanner.nextBoolean();
+                    array[i] = array[i] = new Television(name, description, price, vat, inches, isSmart);
                     break;
                 case "headphones":
-                    array[i] = new Headphones(name, description, new BigDecimal(1), new BigDecimal(0.22), "red", false);
+                    System.out.print("Headphones color: ");
+                    color = myScanner.nextLine();
+                    System.out.print("Are they wireless? ");
+                    areWireless = myScanner.nextBoolean();
+                    array[i] = new Headphones(name, description, price, vat, color, areWireless);
                     break;
                 default:
+                    array[i] = new Product(name, description, price, vat);
                     break;
-            }
-        }
+            } 
+        } 
     }
 }
