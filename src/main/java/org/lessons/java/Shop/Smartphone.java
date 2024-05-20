@@ -7,7 +7,7 @@ class Smartphone extends Product{
 
     private int imei;
     private int storage;
-    private int[] storageOptions = {128, 256, 512, 1024};
+    private int[] storageOptions = {32, 64, 128, 256, 512, 1024};
 
     public Smartphone(String name, String description, BigDecimal price, BigDecimal vat){
         super(name, description, price, vat);
@@ -22,6 +22,6 @@ class Smartphone extends Product{
     }
 
     int getMaxStorage(){
-        return storageOptions[new Random().nextInt(0, 3)];
+        return storageOptions[new Random().nextInt(0, storageOptions.length)];
     }
 }

@@ -18,12 +18,20 @@ public class Main {
         // // String code = apple.getCode();
         // // System.out.println("Product code: " + code);
         
-        Smartphone iphone = new Smartphone("iPhone 15", "This year's iPhone. It'll become obsolete in less than a year...", new BigDecimal(1399), new BigDecimal(0.22));
-        System.out.println(iphone.getCodeName());
-        System.out.println(iphone.getDesc());
-        System.out.println(iphone.getPrice() + "$");
-        System.out.println(iphone.getTaxedPrice(iphone.getPrice()) + "$");
-        System.out.println(iphone.getRandomImei());
-        System.out.println(iphone.getMaxStorage() + "GB");
+        // Smartphone iphone = new Smartphone("iPhone 15", "This year's iPhone. It'll become obsolete in less than a year...", new BigDecimal(1399), new BigDecimal(0.22));
+        // System.out.println(iphone.getCodeName());
+        // System.out.println(iphone.getDesc());
+        // System.out.println(iphone.getPrice() + "$");
+        // System.out.println(iphone.getTaxedPrice(iphone.getPrice()) + "$");
+        // System.out.println(iphone.getRandomImei());
+        // System.out.println(iphone.getMaxStorage() + "GB");
+    
+        // Television tv = new Television("Samsung TV", "It's a TV", 48, true, new BigDecimal(800), new BigDecimal(0.22));
+        //         System.out.println(tv.getCodeName());
+        // System.out.println(tv.getDesc());
+        // System.out.println(tv.getPrice() + "$");
+        // System.out.println(tv.getTaxedPrice(tv.getPrice()) + "$");
+        // System.out.println(tv.getInches() + "''");
+        // System.out.println(tv.getIfItsSmart());
     }
 }
