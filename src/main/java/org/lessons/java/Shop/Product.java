@@ -1,5 +1,7 @@
 package org.lessons.java.Shop;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -9,54 +11,41 @@ public class Product {
     private int code;
     private String name;
     private String description;
-    private double price;
-    private double vat; //IVA, based on Italian VAT (22%)
+    private BigDecimal price;
+    private BigDecimal vat; //IVA, based on Italian VAT (22%)
 
-    public Product(){
-        vat = 22;
-    }
+    /*public Product(){
+         vat = new BigDecimal(0.22);
+    }*/
 
-    public Product(String name, String description, double price, double vat){
+    public Product(String name, String description, BigDecimal price, BigDecimal vat){
         this.code = getRandomNumb();
         this.name = name;
         this.description = description;
         this.price = price;
-        this.vat = vatPerc(vat);
+        this.vat = vat;
     }
 
-    double vatPerc(double iva){
-        return (iva / 100);
-    }
-
-    // double getPrice(){
-    //     System.out.print("How much does this cost?");
-    //     this.price = Double.parseDouble(myScanner.nextLine());
-    //     return this.price;
+    // double vatPerc(double iva){
+    //     return (iva / 100);
     // }
 
     String getName(){
         return name;
     }
 
-    double getPrice(){
-        return price;
+    BigDecimal getPrice(){
+        return price.setScale(2, RoundingMode.HALF_UP);
     }
 
-    double getTaxedPrice(double priceToTax){
-        // double price = Double.parseDouble(myScanner.nextLine());
-        return priceToTax + (priceToTax * vat);
+    BigDecimal getTaxedPrice(BigDecimal priceToTax){
+        return priceToTax.add(priceToTax.multiply(vat)).setScale(2, RoundingMode.HALF_UP);
     }
     
     String getDesc()
     {
         return description;
     }
-
-    // int getCode(){
-    //     int newCode = code;
-    //     // int newCode = (int)Math.random();
-    //     return newCode;
-    // }
 
     int getRandomNumb(){
        Random random = new Random();
@@ -65,8 +54,6 @@ public class Product {
     }
 
     String getCode(){
-        //  String newCode = "0000" + String.valueOf(code);
-        //  return newCode;
         return String.format("%06d", code);
     }
 
