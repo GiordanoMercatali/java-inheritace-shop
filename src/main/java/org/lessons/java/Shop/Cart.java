@@ -13,6 +13,7 @@ public class Cart {
 
         //General
         BigDecimal vat = new BigDecimal("0.22");
+        BigDecimal totalPrice = new BigDecimal("0");
 
         // //Smarthphone
         // int storage;
@@ -61,7 +62,8 @@ public class Cart {
                 default:
                     array[i] = new Product(name, description, price, vat);
                     break;
-            } 
-        } System.out.println(Arrays.toString(array)); 
+            } totalPrice = totalPrice.add(price);
+        } System.out.println(Arrays.toString(array));
+        System.out.println("Final price: " + totalPrice + "$");
     }
 }
