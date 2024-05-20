@@ -16,12 +16,12 @@ public class Headphones extends Product {
     @Override
     public String toString() {
         return "Headphones {" + "\n" +
-                "code: '" + getCode() + "\n" +
-                "name: '" + getName() + "\n" +
-                "description: '" + getDesc() + "\n" +
+                "code: " + getCode() + "\n" +
+                "name: " + getName() + "\n" +
+                "description: " + getDesc() + "\n" +
                 "price: " + getPrice() + "$" + "\n" +
                 "taxed price: " + getTaxedPrice(getPrice()) + "$" + "\n" +
-                "color: '" + color + "\n" +
+                "color: " + color + "\n" +
                 "areWireless: " + areWireless + "\n" +
                 "}  \n";
     }

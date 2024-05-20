@@ -25,9 +25,9 @@ public class Television extends Product{
     @Override
     public String toString() {
         return "Television {" + "\n" +
-                "code: '" + getCode() + "\n" +
-                "name: '" + getName() + "\n" +
-                "description: '" + getDesc() + "\n" +
+                "code: " + getCode() + "\n" +
+                "name: " + getName() + "\n" +
+                "description: " + getDesc() + "\n" +
                 "price: " + getPrice() + "$" +  "\n" +
                 "taxed price: " + getTaxedPrice(getPrice()) + "$" + "\n" +
                 "inches: " + inches + "''" + "\n" +

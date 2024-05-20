@@ -65,9 +65,9 @@ public class Product {
     @Override
     public String toString() {
         return "Product {" +  "\n" +
-                "code: '" + getCode() + "\n" +
-                "name: '" + name + "\n" +
-                "description: '" + description + "\n" +
+                "code: " + getCode() + "\n" +
+                "name: " + name + "\n" +
+                "description: " + description + "\n" +
                 "price: " + price + "$" + "\n" +
                 "taxed price: " + getTaxedPrice(price) + "$" + "\n" +
                 "}  \n";
